@@ -23,8 +23,10 @@
     height:75px;
     object-fit:cover;
 }
-.body{
-    background-image: linear-gradient(90deg, #FFB8B8, #4F4F4F)
+.body, .about, .get-started, .team{
+    background-image: linear-gradient(90deg, #FFB8B8, #4F4F4F);
+    border: none!important;
+    justify-content: center;
 }
 .H1 {
     padding-top: 200px;
@@ -35,3 +37,151 @@
     font-size: 30px;
     text-align: center;
 }
+.H6 {
+    font-size: 26px;
+    text-align: center;
+}
+.title {
+    height: 750px;
+    text-align: center;
+}
+
+.card {
+    align-items: center;
+}
+.card-img-top {
+    width: 75px!important;
+    height:75px;
+}
+.card-body {
+    width:100%;
+}
+
+.flex-div {
+    display: flex;
+    padding-top: 30px;
+}
+.flex-one {
+    flex: 1;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index:999999999999
+}
+.about {
+    width: 95%;
+    border-radius: 10px;
+    height: 500px;
+}
+.about-text {
+    width: 75%;
+}
+
+.stake-options {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.stake-option {
+    border-radius: 15px!important;
+    width: 33%; 
+    margin: 25px;
+    height: 300px;
+    background-color: rgb(243 244 246)!important;
+    text-align: center;
+    padding: 15px;
+}
+.stake-option-size {
+    font-weight: bolder;
+    color: grey
+}
+.stake-option-apy {
+    font-weight: bolder;
+    color: green;  
+}
+
+
+.get-started {
+    height: 250px;
+}
+.get-started-button {
+    border-radius: 4px;
+    background-color:rgb(243 244 246)!important ;
+    padding: 10px;
+    width: 150px;
+    margin:0 auto;
+    display:block;
+
+}
+
+.lavapool-address, .address-copy-icon, #our-apy, #our-apy-prefix{
+    display: inline-block!important;
+}
+
+.team {
+    height: 250px;
+}
+
+.team-body {
+    display:flex;
+    width: 75%;
+}
+.team-card  {
+    width: 33%;
+    background-color: #4F4F4F!important;
+    color: white;
+    margin: 10px;
+}
+.team-images {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.team-names {
+    font-size: 22px;
+    text-align: center;
+}
+
+.slidecontainer {
+    width: 100%; /* Width of the outside container */
+  }
+  
+  /* The slider itself */
+  .slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 25px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+  }
+  
+  /* Mouse-over effects */
+  .slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+  
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #04AA6D; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #04AA6D; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }

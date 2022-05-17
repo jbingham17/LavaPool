@@ -4,17 +4,20 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width-device-width, initial-scale-1.0">
         <title>Lava Pool</title>
+        <link rel="icon" type="image/x-icon" href="img/tokenLogoSmall.svg">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
     </head>
     <body class="body">
         <div class="header">
-            <div class="menu-bar">
-                <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="menu-bar sticky">
+                <nav class="navbar navbar-expand-lg navbar-light sticky">
                     <a class="navbar-brand" href="#"><img class="tokenlogo" src="img/tokenLogoSmall.svg"></a>
                     <a class="navbar-brand nav-item" href="#">LAVA POOL</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,25 +26,136 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                       <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
-                          <a class="nav-link" href="#">Home</a>
+                          <a class="nav-link" href="#home">Home</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#">About</a>
+                          <a class="nav-link" href="#about">About</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#">Team</a>
+                          <a class="nav-link" href="#team">Team</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Help</a>
+                          <a class="nav-link disabled" href="Help" tabindex="-1" aria-disabled="true">Help</a>
                         </li>
                       </ul>
                     </div>
                   </nav> 
             </div>
         </div>
-        <div class="title">
+        <div id="home" class="title">
             <h1 class="H1">LAVA POOL</h1>
             <h4 class="H4">Diversified Ethereum Staking Protocol</h4>
+            <h6 class="H6" id="our-apy-prefix">Our APY: </h6> <h6 class="H6" id="our-apy">7%</h6>
+            <button class="get-started-button" href="#get-started">
+              Get Started
+            </button>
+        </div>
+        <div id="about" class="card mx-auto about">
+          <div class="about-text">
+            <h6 class="card-title H6">A New Take on Staking</h5>
+            <p class="card-text">Lava Pool provides the protocol to gain exposure to multiple staking platforms through a single transaction. In exchange for ETH, you will receive a LavaETH token that represents the rewards that your ETH earns through staking. LavaETH can then be returned at any time (not really) for your ETH, plus the staking rewards.</p>
+          </div>
+          <div class="stake-options">
+            <div class="card stake-option">
+              <a href="https://rocketpool.net/"><img class="card-img-top" src="img/rocketpool.png" alt="rocketpool"></a>
+              <div class="card-body">
+                <h5 class="card-title">RocketPool</h5> 
+                <div class="flex-div">
+                  <div class="flex-one">
+                    <p id="rocketpool-size" class="stake-option-size">25%</p>
+                    <p class="card-text stake-option-label">Lava Pool Size </p>
+                  </div>
+                  <div class="flex-one">
+                    <p id="rocketpool-apy"class="stake-option-apy"></p>
+                    <p class="card-text stake-option-label">APY </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card stake-option">
+              <a href="https://lido.fi/"></a><img class="card-img-top" src="img/lido.svg" alt="lido"></a>
+              <div class="card-body">
+                <h5 class="card-title">Lido</h5> 
+                <div class="flex-div">
+                  <div class="flex-one">
+                    <p id="lido-size" class="stake-option-size">25%</p>
+                    <p class="card-text stake-option-label">Lava Pool Size </p>
+                  </div>
+                  <div class="flex-one">
+                    <p id="lido-apy"class="stake-option-apy"></p>
+                    <p class="card-text stake-option-label">APY </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card stake-option">
+              <a href="https://stakewise.io/"></a><img class="card-img-top" src="img/stakewise.png" alt="stakewise"></a>
+              <div class="card-body">
+                <h5 class="card-title">StakeWise</h5> 
+                <div class="flex-div">
+                  <div class="flex-one">
+                    <p id="stakewise-size" class="stake-option-size">25%</p>
+                    <p class="card-text stake-option-label">Lava Pool Size </p>
+                  </div>
+                  <div class="flex-one">
+                    <p id="stakewise-apy"class="stake-option-apy"></p>
+                    <p class="card-text stake-option-label">APY </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card stake-option">
+              <a href="https://stakefi.ankr.com/liquid-staking"></a><img class="card-img-top" src="img/ankr.webp" alt="stakewise"></a>
+              <div class="card-body">
+                <h5 class="card-title">Ankr</h5>
+                <div class="flex-div">
+                  <div class="flex-one">
+                    <p id="ankr-size" class="stake-option-size">25%</p>
+                    <p class="card-text stake-option-label">Lava Pool Size </p>
+                  </div>
+                  <div class="flex-one">
+                    <p id="ankr-apy"class="stake-option-apy"></p>
+                    <p class="card-text stake-option-label">APY </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> 
+          <div style="height:300px"> 
+            <div class="slidecontainer">
+              <input type="range" min="1" max="100" value="50" class="slider" id="eth-range">
+              <p>Your Net APR:</p><p id="net-apr"></p>
+            </div>
+          </div>
+        </div>
+        <div id="get-started" class="card mx-auto get-started">
+          <div class="get-started-body">
+            <h6 class="card-title H6">Get Started Staking with Lava Pool</h5>
+            <p class="">1. Access your MetaMask wallet and select "Send" at the top of the screen.</p>
+            <p class="lavapool-address">2. Enter the Lava Pool token address and enter the amount of ETH to stake:</p> <p id="lavapool-address" class="lavapool-address">0xcF0Eb69FD014216707DDB344D95Ba22011EB689A  </p> <button onclick="copyToClipboard('#lavapool-address')"><i class="address-copy-icon fa fa-clipboard"></i></button>
+            <p class="">3. Complete the transaction by selecting "Confirm". LavaETH will be added to your wallet in the amount corresponding to your staked ETH.</p>
+            <p class="">4. Return your LavaETH token at any time to re-claim your ETH and staking rewards!</p>
+          </div>
+        </div>
+        <div id="team" class="card mx-auto team">
+          <h6 class="card-title H6">LavaPool Team</h5>
+          <div class="team-body">
+            <div class="card team-card">
+              <img class="team-images" src="img/bobby.jpeg"/>
+              <h6 class="team-names">Bobby Schiller</h6>
+            </div>
+            <div class="card team-card">
+              <img class="team-images" src="img/phil.jpeg"/>
+              <h6 class="team-names">Phil Vlandis</h6>
+            </div>
+            <div class="card team-card">
+              <img class="team-images" src="img/bingham.jpeg"/>
+              <h6 class="team-names">John Bingham</h6>
+            </div>
+          </div>  
+        </div>
+        <div id="bottomdiv" class="mx-auto" style="height:500px";>
         </div>
     </body>
+    <script type="text/javascript"src="js/callAPI.js"></script>
 </html>
