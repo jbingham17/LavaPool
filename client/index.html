@@ -13,6 +13,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+        <script src="https://kit.fontawesome.com/b9713781b2.js" crossorigin="anonymous"></script>
     </head>
     <body class="body">
         <div class="header">
@@ -44,16 +45,27 @@
         </div>
         <div id="home" class="title">
             <h1 class="H1">LAVA POOL</h1>
+            <br>
             <h4 class="H4">Diversified Ethereum Staking Protocol</h4>
             <h6 class="H6" id="our-apy-prefix">Our APY: </h6> <h6 class="H6" id="our-apy">7%</h6>
-            <button class="get-started-button" href="#get-started">
+            <br>
+            <br>
+            <br>
+            <button class="get-started-button btn" href="#get-started">
               Get Started
             </button>
         </div>
+        
+        <br>
+        <br>
         <div id="about" class="card mx-auto about">
           <div class="about-text">
-            <h6 class="card-title H6">A New Take on Staking</h5>
-            <p class="card-text">Lava Pool provides the protocol to gain exposure to multiple staking platforms through a single transaction. In exchange for ETH, you will receive a LavaETH token that represents the rewards that your ETH earns through staking. LavaETH can then be returned at any time (not really) for your ETH, plus the staking rewards.</p>
+            <h6 class="card-title H6">Diversify Your Stake</h5>
+            <p class="card-text">Lava Pool provides a simple way to diversify your staking risk across multiple pooled staking platforms. 
+              In exchange for ETH, you will receive a LavaETH token that represents the rewards that your ETH earns through staking. 
+              LavaETH can then be returned at any time for your ETH, plus the staking rewards you earned. 
+              Currently Lava Pool uses an equal weighting of four of the largest liquidity pools, shown here.
+            </p>
           </div>
           <div class="stake-options">
             <div class="card stake-option">
@@ -63,7 +75,7 @@
                 <div class="flex-div">
                   <div class="flex-one">
                     <p id="rocketpool-size" class="stake-option-size">25%</p>
-                    <p class="card-text stake-option-label">Lava Pool Size </p>
+                    <p class="card-text stake-option-label">Lava Pool Weight </p>
                   </div>
                   <div class="flex-one">
                     <p id="rocketpool-apy"class="stake-option-apy"></p>
@@ -79,7 +91,7 @@
                 <div class="flex-div">
                   <div class="flex-one">
                     <p id="lido-size" class="stake-option-size">25%</p>
-                    <p class="card-text stake-option-label">Lava Pool Size </p>
+                    <p class="card-text stake-option-label">Lava Pool Weight </p>
                   </div>
                   <div class="flex-one">
                     <p id="lido-apy"class="stake-option-apy"></p>
@@ -95,7 +107,7 @@
                 <div class="flex-div">
                   <div class="flex-one">
                     <p id="stakewise-size" class="stake-option-size">25%</p>
-                    <p class="card-text stake-option-label">Lava Pool Size </p>
+                    <p class="card-text stake-option-label">Lava Pool Weight </p>
                   </div>
                   <div class="flex-one">
                     <p id="stakewise-apy"class="stake-option-apy"></p>
@@ -111,7 +123,7 @@
                 <div class="flex-div">
                   <div class="flex-one">
                     <p id="ankr-size" class="stake-option-size">25%</p>
-                    <p class="card-text stake-option-label">Lava Pool Size </p>
+                    <p class="card-text stake-option-label">Lava Pool Weight </p>
                   </div>
                   <div class="flex-one">
                     <p id="ankr-apy"class="stake-option-apy"></p>
@@ -127,6 +139,55 @@
               <p>Your Net APR:</p><p id="net-apr"></p>
             </div>
           </div>
+        </div>
+        <br>
+        <br>
+        <div class="container why-lava padding rounded margin-bottom">
+          <br>
+          <br>
+          <h4 class="H4">Why Lava Pool?</h4>
+          <br>
+          <br>
+          <div class="row text-center padding">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <i class="fa-solid fa-bolt"></i>
+              <h6>Reduced Slashing Risk</h6>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <i class="fa-solid fa-heart"></i>
+              <h6>Health of ETH Ecosystem</h6>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <i class="fa-solid fa-person-falling"></i>
+              <h6>Reduced Depegging Risk</h6>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <i class="fa-solid fa-lock"></i>
+              <h6>Trustless</h6>
+            </div>
+          </div>
+          <br>
+          <br>
+          <div class="row text-center padding">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <i class="fa-brands fa-osi"></i>
+              <h6>Open Source</h6>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <i class="fa-solid fa-people-group"></i>
+              <h6>Diverse Clients</h6>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <i class="fa-solid fa-water-ladder"></i>
+              <h6>Diverse Staking Pools</h6>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <i class="fa-solid fa-money-bill-transfer"></i>
+              <h6>Withdraw at any Time</h6>
+            </div>
+          </div>
+          <br>
+          <br>
         </div>
         <div id="get-started" class="card mx-auto get-started">
           <div class="get-started-body">

@@ -109,13 +109,10 @@
     height: 250px;
 }
 .get-started-button {
-    border-radius: 4px;
-    background-color:rgb(243 244 246)!important ;
-    padding: 10px;
-    width: 150px;
-    margin:0 auto;
-    display:block;
-
+    background-color:#4F4F4F!important ;
+    border-color: #4F4F4F;
+    color: #FFFFFF!important;
+    
 }
 
 .lavapool-address, .address-copy-icon, #our-apy, #our-apy-prefix{
@@ -184,4 +181,11 @@
     height: 25px; /* Slider handle height */
     background: #04AA6D; /* Green background */
     cursor: pointer; /* Cursor on hover */
+  }
+  .why-lava{
+      background-color: #4F4F4F;
+      color: #FFFFFF;
+  }
+  .fa-solid, .fa-brands{
+      font-size: 60px;
   }
