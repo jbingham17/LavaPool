@@ -6,8 +6,8 @@ pragma solidity ^0.8.0;
 import '@openzeppelin/contracts/token/ERC777/ERC777.sol';
 import '@openzeppelin/contracts/utils/math/SafeMath.sol';
 import "@uniswap/v3-periphery/contracts/libraries/TransferHelper.sol";
-import '../IWETH9.sol';
-import '../Swap.sol';
+import '../interfaces/IWETH9.sol';
+import '../interfaces/ISwap.sol';
 
 /**
  * @dev {ERC20} token, including:
@@ -26,9 +26,7 @@ contract lavapoolEthereum is ERC777, IERC777Recipient {
     address public constant stETH = 0x01BE23585060835E02B77ef475b0Cc51aA1e0709; //Lido Token - Address for LINK
     // address public constant sETH2 = 0xFb1D709cb959aC0EA14cAD0927EABC7832e65058; //Stakewise Staking Token - Address for USDT
     // address public constant rETH2 = 0x3d2aB6aa7BAaef25a39D1B3b1ce22418f3ef0223; //Stakewise Rewards Token - Address for USDM
-    address private senderAddress;
     address router_addr = 0xE592427A0AEce92De3Edee1F18E0157C05861564;
-    uint public gas = 0;
     
     /**
      */
@@ -44,7 +42,6 @@ contract lavapoolEthereum is ERC777, IERC777Recipient {
     function _swapEthForWeth (uint amount) public {
         
         // send the Eth to WEth
-        // payable(WETH9_addr).send(amount - gas);
 	IWETH9(WETH9_addr).deposit{ value: amount }();
         
     }
@@ -65,11 +62,10 @@ contract lavapoolEthereum is ERC777, IERC777Recipient {
 	IWETH9(WETH9_addr).deposit{ value: amount }();
 
         // perform the swap for stake
-        //require(IWETH9(WETH9_addr).approve(address(router_addr), amount), "Approve has failed");
 	TransferHelper.safeApprove(WETH9_addr, address(Swap_addr), amount);
 
 	_mint(msg.sender, amount, "", "");
-        Swap(Swap_addr).swapEthForStake(amount);
+        ISwap(Swap_addr).swapEthForStake(amount);
     }
     
     function _swapStakeForEth (uint amount, address payable from) public {
@@ -90,7 +86,7 @@ contract lavapoolEthereum is ERC777, IERC777Recipient {
 	_burn(address(this), amount, "", "");
 
         // perform the swap
-        Swap(Swap_addr).swapStakeforEth(user_rETH, user_stETH);
+        ISwap(Swap_addr).swapStakeforEth(user_rETH, user_stETH);
 
 	uint send_back = IERC20(WETH9_addr).balanceOf(address(this));
 
