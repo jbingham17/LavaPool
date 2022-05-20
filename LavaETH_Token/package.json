@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.6.0",
+    "@truffle/hdwallet-provider": "^2.0.8",
+    "@uniswap/v3-core": "github:uniswap/v3-core",
+    "@uniswap/v3-periphery": "github:uniswap/v3-periphery",
+    "canonical-weth": "^1.4.0",
+    "truffle-contract": "^4.0.31",
+    "uniswap": "^0.0.1",
+    "web3": "^1.7.3"
+  }
+}
